@@ -1,0 +1,24 @@
+<h1>Input Page</h1>
+
+<p>
+	<%= link_to "Red", output_path(color: "red") %>
+</p>
+
+<p>
+	<%= link_to "Blue", output_path(color: "blue") %>
+</p>
+
+<p>
+	<%= link_to "Green", output_path(color: "green") %>
+</p>
+
+<%= form_tag output_path, method: "post" do %>
+	<p>
+		<%= text_field_tag "color",nil,placeholder:"What color?" %>
+	</p>
+	<p>
+		<%= submit_tag "Submit" %>
+	</p>
+
+
+<% end %>
